@@ -15,7 +15,7 @@ def solution(k, tangerine):
     for j in list_dic1:
         sum += j[1]
         result += 1
-        if sum == k:
+        if sum >= k:    #if sum == k:
             return result
     else:
         return 1
