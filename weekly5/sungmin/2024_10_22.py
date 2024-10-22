@@ -1,7 +1,29 @@
 # #===========================================================================
 # # #problem_1
 
-
+def solution(k, tangerine):
+    tangerine.sort()
+    a = []
+    b = 0             # 귤 크기 저장 
+    c = 1             # 현재 귤 크기 횟수
+    for i in tangerine:
+        if i == b:
+            c += 1
+            continue
+        a.append(c)
+        c = 1          # 새로운 귤크기 다시 1로 초기화
+        b = i          # 새로운 귤크기 i 로 저장
+    a.append(c)
+    del a[0]
+    a.sort(reverse=True)
+    
+    c = 0
+    b = 0
+    for i in a:
+        c += i
+        b += 1
+        if c >= k:
+            return b
 # #===========================================================================
 # # #problem_2
 
