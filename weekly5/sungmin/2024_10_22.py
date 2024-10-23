@@ -59,3 +59,16 @@ print(result)
 
 # #===========================================================================
 # # #problem_3
+
+
+def f(n):
+    ncount = bin(n).count('1')    # n을 2진수로 변환후 1을 count함수를 통해 1을 찿는다
+    num = n+1         # n 보다 큰수 
+    while True:       #무한루프
+        next_num = bin(num).count('1') #n 보다 큰수를 다시 2진법 변환후 1을 count함수를 통해 1을 찿는다
+
+        if ncount == next_num:    # 처음 n의 1과 n+1의 1의 수가 동일할때
+            return num            # n+1이 저장되어 있는 num 반환
+        num += 1                  # num +1 씩 중가
+
+print(f(78))
