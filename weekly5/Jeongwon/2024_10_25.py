@@ -44,7 +44,7 @@ def solution(food):
         if cnt != 0:
             result.append(str(i) * cnt)
     
-    result1 = result[::-1]
+    result1 = reversed(result)
     answer = ''.join(result) + '0' + ''.join(result1)
 
     return answer
