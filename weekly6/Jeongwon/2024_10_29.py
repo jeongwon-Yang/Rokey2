@@ -48,6 +48,6 @@ def solution(n):
 
         print(a,b)
     
-    return b
+    return b % 1234567
 
 print(solution(5))
